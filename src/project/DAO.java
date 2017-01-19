@@ -1,11 +1,11 @@
 package project;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 public abstract class DAO<T> {
-    private List<T> list = new ArrayList<T>();
+    private Collection<T> list;
 
     public boolean add(T t) {
         return list.add(t);
