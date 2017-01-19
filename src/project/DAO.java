@@ -5,14 +5,14 @@ import java.util.List;
 import java.util.Map;
 
 public abstract class DAO<T> {
-    protected Collection<T> list;
+    protected Collection<T> items;
 
     public boolean add(T t) {
-        return list.add(t);
+        return items.add(t);
     }
 
     public boolean delete(T t) {
-        return list.remove(t);
+        return items.remove(t);
     }
 
     public abstract boolean update(T t);

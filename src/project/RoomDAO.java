@@ -1,9 +1,14 @@
 package project;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class RoomDAO extends DAO<Room> {
+    public RoomDAO() {
+        this.items = new ArrayList<>();
+    }
+
     @Override
     public boolean update(Room room) {
         return false;
