@@ -14,6 +14,11 @@ public class UserDAO extends DAO<User> {
     }
 
     @Override
+    public boolean delete(User user) {
+        return set.remove(user);
+    }
+
+    @Override
     public boolean update(User user) {
         return false;
     }
