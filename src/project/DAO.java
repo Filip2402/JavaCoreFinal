@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public abstract class DAO<T> {
-    private Collection<T> list;
+    protected Collection<T> list;
 
     public boolean add(T t) {
         return list.add(t);
