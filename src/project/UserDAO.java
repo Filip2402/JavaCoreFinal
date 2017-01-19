@@ -6,7 +6,9 @@ import java.util.Map;
 import java.util.Set;
 
 public class UserDAO extends DAO<User> {
-    private Set<User> list = new HashSet<>();
+    public UserDAO() {
+        list = new HashSet<>();
+    }
 
     @Override
     public boolean update(User user) {
