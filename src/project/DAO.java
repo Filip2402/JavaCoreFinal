@@ -19,13 +19,13 @@ public abstract class DAO<T> {
     }
 
     public abstract boolean update(T t);
-    public Collection<T> find(Map<String, String> params) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+    public Collection<T> find(Map<String, String> params)
+            throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         List<T> result = new ArrayList<>(items);
-        Object[] stringItems = items.toArray();
         for (Map.Entry<String, String> mapEntry : params.entrySet()) {
             List<T> temp = new ArrayList<>();
             String methodName = "get" + mapEntry.getKey().substring(0, 1).toUpperCase() + mapEntry.getKey().substring(1);
-            Method method = stringItems[0].getClass().getMethod(methodName);
+            Method method = result.get(0).getClass().getMethod(methodName);
             for (T item : result) {
                 if (method.invoke(item).equals(mapEntry.getValue())) {
                     temp.add(item);
