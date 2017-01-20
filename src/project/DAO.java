@@ -15,5 +15,6 @@ public abstract class DAO<T> {
     }
 
     public abstract boolean update(T t);
+
     public abstract Collection<T> find(Map<String, String> params);
 }

@@ -5,12 +5,21 @@ public class User{
     private String firstName;
     private String lastName;
     private String email;
+    private String city;
 
     public User(String firstName, String lastName, String email) {
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public User(String firstName, String lastName, String email, String city) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.city = city;
     }
 
     @Override
@@ -26,5 +35,25 @@ public class User{
     @Override
     public int hashCode() {
         return email.hashCode();
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCity() {
+        return city;
     }
 }
