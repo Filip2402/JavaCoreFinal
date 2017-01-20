@@ -7,9 +7,9 @@ import java.util.Map;
 
 public class Tester {
     public static void main(String[] args) {
-        User user = new User("Vasya", "Vaskin", "e@a.com");
-        User user2 = new User("Vasya", "Pupkin", "a@a.com");
-        User user3 = new User("Kolya", "Pupkin", "b@a.com");
+        User user = new User("Vasya", "Vaskin", "e@a.com", "Kiev");
+        User user2 = new User("Vasya", "Pupkin", "a@a.com", "Kharkov");
+        User user3 = new User("Kolya", "Pupkin", "b@a.com", "Kiev");
         DAO<User> userDao = new UserDAO();
         DAO<Room> roomDao = new RoomDAO();
         DAO<Hotel> hotelDao = new HotelDAO();
@@ -22,6 +22,7 @@ public class Tester {
         roomDao.save(room);
         Map<String, String> params = new HashMap<>();
         params.put("firstName", "Vasya");
+        params.put("city", "Kiev");
         try {
             Collection<User> users = userDao.find(params);
             for (User u : users) {

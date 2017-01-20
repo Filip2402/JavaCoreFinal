@@ -19,6 +19,7 @@ public abstract class DAO<T> {
     }
 
     public abstract boolean update(T t);
+
     public Collection<T> find(Map<String, String> params)
             throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         List<T> result = new ArrayList<>(items);
