@@ -7,7 +7,7 @@ import java.util.Map;
 public abstract class DAO<T> {
     protected Collection<T> items;
 
-    public boolean add(T t) {
+    public boolean save(T t) {
         return items.add(t);
     }
 
