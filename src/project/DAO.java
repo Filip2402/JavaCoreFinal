@@ -1,7 +1,6 @@
 package project;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 public abstract class DAO<T> {
