@@ -27,4 +27,20 @@ public class User{
     public int hashCode() {
         return email.hashCode();
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }
