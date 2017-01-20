@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class UserDAO extends DAO<User> {
     public UserDAO() {
-        list = new HashSet<>();
+        items = new HashSet<>();
     }
 
     @Override
